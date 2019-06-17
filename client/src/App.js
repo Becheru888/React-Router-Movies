@@ -5,6 +5,7 @@ import MovieList from './Movies/MovieList';
 import Movie from './Movies/Movie';
 
 
+
 export default class App extends Component {
   constructor() {
     super();
@@ -23,8 +24,8 @@ export default class App extends Component {
     return (
       <div>
         <SavedList list={this.state.savedList} />
-        <Route exact path={'/'} Component={MovieList}/>
-        <Route path={'/Movie/:id'} Component={Movie}/>
+        <Route exact path="/" component={MovieList}/>
+        <Route path="/movies/:id" component={Movie}/>
       </div>
     );
   }
